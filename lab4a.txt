@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkusn(){
+            var str=document.getElementById('usn').value;
+            var usno=/^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+            var rest=str.match(usno);
+            if(rest==null)
+                alert("invalid usn")
+            else
+                alert("valid usn");
+            }
+    </script>
+</head>
+<body>
+    <h2 align="center" style="color:red;">Validate usn</h2>
+    <hr><br><br>
+    <form action="">
+        <label for=""><h2>Enter USN:</h2>
+        <input type="text" id="usn" size="20"></label>
+        <input type="button" value="validate" onclick="checkusn()">
+    </form>
+</body>
+</html>
